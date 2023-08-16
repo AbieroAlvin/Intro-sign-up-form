@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+img,
+svg {
+  width: 100%;
+  display: block;
+}
+
+:root {
+  /* Primary */
+
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+
+  /* Accent */
+
+  --Blue: hsl(248, 32%, 49%);
+
+  /* Neutral */
+
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+body {
+  font-size: 16px;
+  height: 100vh;
+  background: url(./images/bg-intro-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--Red);
+  margin: 4rem 0rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-component {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 0 0 2rem;
+}
+
+.content {
+  color: white;
+  padding: 0 1rem;
+  text-align: center;
+  width: 90%;
+}
+
+.content h2 {
+  padding: 0 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.content p {
+  /* padding: 0 0.5rem; */
+  line-height: 1.75;
+  opacity: 0.9;
+}
+
+.price-form {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.price-component {
+  width: 90%;
+  background: var(--Blue);
+  text-align: center;
+  padding: 0.5rem 2rem;
+  border-radius: 0.75rem;
+  color: white;
+  font-weight: 500;
+  display: inline-block;
+  box-shadow: 0px 4px 5px 0px rgba(90, 85, 125, 0.58);
+}
+
+.price-component span {
+  font-weight: 300;
+  color: var(--Grayish-Blue);
+}
+
+.container {
+  background: white;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 0.75rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form .input-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input:focus {
+  outline: none !important;
+  border-color: #719ece;
+  box-shadow: 0 0 10px #719ece;
+}
+
+.container form input {
+  padding: 0.75rem;
+  border: 1px solid var(--Grayish-Blue);
+  border-radius: 5px;
+}
+
+.container form input::placeholder {
+  color: var(--Dark-Blue);
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+form button {
+  padding: 0.75rem;
+  color: white;
+  border: none;
+  background: var(--Green);
+  border-radius: 5px;
+  text-transform: uppercase;
+  box-shadow: inset 1px -5px 5px 0px rgba(86, 125, 95, 0.51);
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.75;
+}
+
+.terms {
+  font-size: 11px;
+  margin-top: 10px;
+  color: var(--Grayish-Blue);
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.terms span {
+  color: var(--Red);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 4rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error-text {
+  border: 2px solid var(--Red);
+  background: url(./images/icon-error.svg) no-repeat;
+  background-position: 95% 50%;
+}
+
+.input-control .error {
+  font-size: 10px;
+  font-style: italic;
+  color: var(--Red);
+  margin-top: -5px;
+  margin-bottom: 4px;
+}
+
+/* .input-control.success {
+  border: 2px solid var(--Green);
+} */
+
+@media all and (min-width: 568px) {
+  body {
+    display: grid;
+    place-content: center;
+  }
+  #main-component {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 6rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .content h2 {
+    padding: 0;
+    font-size: 3rem;
+  }
+
+  .content p {
+    padding: 0;
+  }
+
+  .price-component {
+    padding: 1rem 0.5rem;
+  }
+}
